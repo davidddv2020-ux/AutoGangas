@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoGangas Bosques de San Nicolas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+body{
+    margin: 0;
+    font-family: arial,sans-serif;
+    background-color: #f8fafc;
+}
+.encabezado{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:12px 70px;
+    background:#111827;
+    backdrop-filter:blur(8px);
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+}
+nav{
+    display:flex;
+    gap:45px;
+    align-items: center;
+}
+nav a{
+    position:relative;
+    text-decoration:none;
+    color:white;
+    font-size:18px;
+    font-weight:600;
+    letter-spacing: 3px;
+    transition:.3s;
+}
+nav a.activo{
+    color:#F97316;
+}
+nav a.activo::after{
+    width:100%;
+}
+.hero{
+    position:relative;
+    height:580px;
+    overflow:hidden;
+}
+.hero img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+    .hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        90deg,
+        rgba(17,24,39,.75) 0%,
+        rgba(17,24,39,.45) 35%,
+        rgba(17,24,39,.15) 100%
+    );
+    z-index:1;
+}
+.hero-contenido{
+    position:absolute;
+    top:50%;
+    left:80px;
+    transform:translateY(-50%);
+    color:white;
+    max-width:600px;
+}
+.hero-contenido h1{
+    font-size:68px;
+    margin:0;
+    line-height:1.1;
+}
+.hero-contenido p{
+     position:absolute;
+    left:60px;
+    bottom:80px;
+    max-width:520px;
+}
+.boton{
+    display:inline-block;
+    background:#F97316;
+    color:white;
+    text-decoration:none;
+    padding:18px 40px;
+    border-radius:12px;
+    font-size:18px;
+    font-weight:bold;
+    transition:.3s;
+}
+.boton:hover{
+    background:#EA580C;
+    transform:translateY(-3px);
+    box-shadow:0 12px 30px rgba(249,115,22,.35);
+}
+.vehiculos{
+    padding:80px 40px;
+    text-align:center;
+    flex-wrap: wrap;
+    
+}
+.footer{
+    background:#111827;
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:60px;
+}
+.ubicacion{
+    padding:80px 40px;
+    text-align:center;
+}
+
+.ubicacion h2{
+    font-size:40px;
+    margin-bottom:30px;
+    color:#111827;
+}
+
+.ubicacion iframe{
+    width:100%;
+    max-width:1200px;
+    height:450px;
+    border-radius:15px;
+     display:block;
+    margin:0 auto 30px auto;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+.botones-mapa{
+    margin-top:25px;
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+.whatsapp{
+    position:fixed;
+    right:25px;
+    bottom:25px;
+    width:60px;
+    height:60px;
+    background:#25D366;
+    color:white;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-decoration:none;
+    font-size:30px;
+    box-shadow:0 5px 15px rgba(0,0,0,.3);
+    z-index:999;
+}
+
+.whatsapp:hover{
+    transform:scale(1.1);
+}
+.contenedor-cards{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.card{
+    width:320px;
+    background:#fff;
+    border-radius:18px;
+    overflow:hidden;
+    text-decoration:none;
+    color:inherit;
+    position:relative;
+    box-shadow:0 8px 25px rgba(0,0,0,.12);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 35px rgba(0,0,0,.18);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    transition:.3s;
+}
+
+.card:hover img{
+    transform:scale(1.05);
+}
+
+.contenido-card{
+    padding:20px;
+}
+
+.card h3{
+    margin:0;
+    font-size:24px;
+    color:#111827;
+}
+
+.anio{
+    color:#6b7280;
+    font-weight:bold;
+    margin:6px 0 18px;
+}
+
+.datos{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    color:#555;
+}
+
+.datos div{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.datos i{
+    color:#F97316;
+}
+
+.precio{
+    color:#F97316;
+    font-size:32px;
+    margin:20px 0 12px;
+}
+
+.ver-mas{
+    font-weight:bold;
+    color:#111827;
+    transition:.3s;
+}
+
+.card:hover .ver-mas{
+    color:#F97316;
+}
+
+.etiqueta{
+    position:absolute;
+    top:15px;
+    left:15px;
+    background:#F97316;
+    color:white;
+    padding:6px 12px;
+    border-radius:20px;
+    font-size:13px;
+    font-weight:bold;
+}.logo{
+    width:180px;
+    transition:.3s;
+}
+.logo:hover{
+    transform:scale(1.03);
+}
+nav a::after{
+    content:"";
+    position:absolute;
+    left:50%;
+    bottom:-8px;
+    width:0;
+    height:3px;
+    background:#F97316;
+    border-radius:10px;
+    transform: translateX(-50%);
+    transition:.3s;
+}
+nav a:hover{
+    color:#F97316;
+}
+nav a:hover::after{
+    width:100%;
+}
+.beneficios{
+    max-width:1300px;
+    margin:70px auto;
+    padding:0 30px;
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+}
+
+.beneficio{
+    background:white;
+    border-radius:18px;
+    padding:35px 25px;
+
+    text-align:center;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+    transition:.3s;
+}
+
+.beneficio:hover{
+    transform:translateY(-8px);
+    box-shadow:0 18px 35px rgba(0,0,0,.15);
+}
+
+.beneficio i{
+    font-size:45px;
+    color:#F97316;
+    margin-bottom:20px;
+}
+
+.beneficio h3{
+    margin:0 0 15px;
+    color:#111827;
+    font-size:23px;
+}
+
+.beneficio p{
+    color:#6b7280;
+    line-height:1.6;
+}
+.caracteristicas{
+    max-width:1200px;
+    margin:70px auto;
+    padding:0 20px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+}
+
+.item{
+    background:#fff;
+    border-radius:18px;
+    padding:35px 25px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    transition:.3s;
+}
+.item:hover{
+    transform:translateY(-8px);
+    box-shadow:0 12px 25px rgba(0,0,0,.18);
+}
+
+.item i{
+    font-size:42px;
+    color:#F97316;
+    margin-bottom: 20px;
+}
+.item h3{
+    margin-bottom:12px;
+    color:#111827;
+}
+.item p{
+    color:#6b7280;
+    line-height:1.6;
+}
+
+.item div{
+    display:flex;
+    flex-direction:column;
+}
+
+.item strong{
+    font-size:16px;
+    color:#111827;
+}
+
+.item span{
+    font-size:14px;
+    color:#6b7280;
+}
+.hero{
+    position:relative;
+    height:650px;
+    overflow:hidden;
+}
+
+.hero-img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+.hero-content{
+    position:absolute;
+    left:80px;
+    bottom:80px;
+    color:white;
+    max-width:520px;
+}
+.hero-content h1{
+    font-size:65px;
+    margin:0 0 20px;
+    line-height:1.1;
+    color:white;
+}
+.hero-content p{
+    font-size:22px;
+    color:#e5e7eb;
+    margin-bottom:35px;
+}
+.hero-content{
+    z-index:2;
+}
+@keyframes aparecer{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+.hero-content{
+    position:absolute;
+    left:80px;
+    bottom:80px;
+    color:white;
+
+    animation:aparecer 1s ease-out;
+}
+.boton{
+    animation:aparecer 1.4s ease-out;
+}
+.encabezado{
+    animation:aparecer 0.8s ease;
+}
+.item:nth-child(1){
+    animation:aparecer .8s ease forwards;
+}
+.item:nth-child(2){
+    animation:aparecer 1s ease forwards;
+}
+.item:nth-child(3){
+    animation:aparecer 1.2s ease forwards;
+}
+.item:nth-child(4){
+    animation:aparecer 1.4s ease forwards;
+}
+    </style>
+</head>
+<body>
+    
+    <header class="encabezado">
+    <a href="index.html">
+        <img src="img/logotipo.png" class="logo" alt="AutoGangas">
+    </a>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="catalogo.html">Catálogo</a>
+        <a href="contactos.html">Contacto</a>
+    </nav>
+</header>
+<main>
+    <section class="hero">
+    <img src="img/Portada.jpg" alt="Portada">
+     <div class="hero-content">
+
+        <h1>Encuentra el vehículo ideal</h1>
+        <p>
+            Calidad, confianza y el mejor precio para que conduzcas con tranquilidad.
+        </p>
+        <a href="catalogo.html" class="boton">Ver catálogo</a>
+    </div>
+    </section>
+    <section class="caracteristicas">
+
+    <div class="item">
+        <i class="fa-solid fa-shield"></i>
+        <h3>Vehículos Revisados</h3>
+        <p>Todos nuestros vehículos pasan por una revisión completa.</p>
+    </div>
+
+    <div class="item">
+        <i class="fa-solid fa-money-check-dollar"></i>
+        <h3>Financiamiento</h3>
+        <p>Te ayudamos a encontrar la mejor opción de pago.</p>
+    </div>
+
+    <div class="item">
+        <i class="fa-solid fa-car-side"></i>
+        <h3>Prueba de Manejo</h3>
+        <p>Conoce el vehículo antes de comprarlo.</p>
+    </div>
+
+    <div class="item">
+        <i class="fa-solid fa-handshake"></i>
+        <h3>Asesoría Personalizada</h3>
+        <p>Te acompañamos durante todo el proceso de compra.</p>
+    </div>
+</section>
+</main>
+<section class="vehiculos">
+    <h2>Vehículos Destacados</h2>
+    <div class="contenedor-cards">
+        <a href="Nissan.html" class="card">
+            <span class="etiqueta">Destacado</span>
+            <img src="img/Nissan Sentra.jpeg" alt="Nissan Sentra">
+            <div class="contenido-card">
+                <h3>Nissan Sentra</h3>
+                <p class="anio">2019</p>
+                <div class="datos">
+                    <div><i class="fa-solid fa-gear"></i> Automático</div>
+                    <div><i class="fa-solid fa-gas-pump"></i> Gasolina</div>
+                    <div><i class="fa-solid fa-road"></i> 82,000 km</div>
+                </div>
+                <h2 class="precio">Q45,000</h2>
+                <span class="ver-mas">
+                    Ver vehículo →
+                </span>
+            </div>
+        </a>
+        <a href="civic.html" class="card">
+            <img src="img/Honda civic.jpeg" alt="Honda Civic">
+            <div class="contenido-card">
+                <h3>Honda Civic</h3>
+                <p class="anio">2014</p>
+                <div class="datos">
+                    <div><i class="fa-solid fa-gear"></i> Automático</div>
+                    <div><i class="fa-solid fa-gas-pump"></i> Gasolina</div>
+                    <div><i class="fa-solid fa-road"></i> 105,000 km</div>
+                </div>
+                <h2 class="precio">Q45,000</h2>
+                <span class="ver-mas">
+                    Ver vehículo →
+                </span>
+            </div>
+        </a>
+        <a href="Mazda3.html" class="card">
+            <img src="img/Mazda 3.jpeg" alt="Mazda 3">
+            <div class="contenido-card">
+                <h3>Mazda 3</h3>
+                <p class="anio">2016</p>
+                <div class="datos">
+                    <div><i class="fa-solid fa-gear"></i> Automático</div>
+                    <div><i class="fa-solid fa-gas-pump"></i> Gasolina</div>
+                    <div><i class="fa-solid fa-road"></i> 95,000 km</div>
+                </div>
+                <h2 class="precio">Q45,000</h2>
+                <span class="ver-mas">
+                    Ver vehículo →
+                </span>
+            </div>
+        </a>
+    </div>
+</section>
+<section class="ubicacion">
+    <h2>📍 Visítanos</h2>
+    <p>Nos encontramos en Bosques de San Nicolás, Mixco, Guatemala.</p>
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1875.0251868804583!2d-90.5644017258512!3d14.659618211588825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85899fca4d0e6217%3A0x14c8c0d2090f2ddc!2sImportadora%20LMPJimenez!5e0!3m2!1ses-419!2sgt!4v1783473785289!5m2!1ses-419!2sgt"
+        width="100%"
+        height="450"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="strict-origin-when-cross-origin">
+    </iframe>
+    <div class="botones-mapa">
+    <a href="https://maps.google.com/?q=Importadora+LMPJimenez" target="_blank" class="boton">
+        📍 Abrir en Google Maps
+    </a>
+
+    <a href="https://waze.com/ul?ll=14.659618,-90.564402&navigate=yes" target="_blank" class="boton">
+        🚗 Abrir en Waze
+    </a>
+</div>
+</section>
+<footer class="footer">
+    <p>© 2026 AutoGangas Bosques de San Nicolás. Todos los derechos reservados.</p>
+</footer>
+<a href="https://wa.me/50234146047" class="whatsapp" target="_blank">
+    <i class="fa-brands fa-whatsapp"></i>
+</a>
+</body>
+</html>
