@@ -1,0 +1,472 @@
+/*==================================================
+                TABLET (768px)
+==================================================*/
+
+@media (max-width:768px){
+.encabezado-seccion{
+    margin-bottom:50px;
+}
+
+.titulo-seccion{
+    font-size:38px;
+}
+
+.descripcion-seccion{
+    font-size:17px;
+    max-width:650px;
+}
+    .caracteristicas{
+        grid-template-columns: repeat(2, 1fr);
+        gap:20px;
+    }
+
+    .encabezado{
+
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+
+        padding:20px;
+
+        gap:20px;
+    }
+
+    .logo{
+
+        width:170px;
+    }
+
+    nav{
+
+        display:flex;
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+        gap:18px;
+    }
+
+    nav a{
+
+        font-size:17px;
+
+        letter-spacing:2px;
+    }
+    .hero{
+        height:550px;
+    }
+
+    .hero-content{
+        left:40px;
+        right:40px;
+        bottom:60px;
+        max-width:100%;
+    }
+
+    .hero-content h1{
+        font-size:48px;
+    }
+
+    .hero-content p{
+        font-size:20px;
+    }
+
+    .boton{
+        padding:16px 34px;
+        font-size:17px;
+    }
+    .vehiculos{
+    padding:70px 20px;
+}
+
+.contenedor-cards{
+    grid-template-columns:1fr;
+    max-width:550px;
+}
+
+.card img{
+    height:280px;
+}
+
+.contenido-card{
+    padding:22px;
+}
+
+.contenido-card h3{
+    font-size:26px;
+}
+
+.precio{
+    font-size:30px;
+}
+.elegir{
+    padding:70px 20px;
+}
+
+.contenedor-elegir{
+    grid-template-columns:1fr;
+    gap:25px;
+}
+
+.item-elegir{
+    padding:30px;
+}
+
+.item-elegir i{
+    font-size:42px;
+}
+
+.item-elegir h3{
+    font-size:24px;
+}
+.ubicacion{
+    padding:70px 20px;
+}
+
+.contenedor-ubicacion{
+    grid-template-columns:1fr;
+    gap:35px;
+}
+
+.mapa iframe{
+    min-height:400px;
+}
+
+.info-ubicacion{
+    padding:30px;
+}
+
+.info-item{
+    gap:15px;
+}
+
+.botones-mapa{
+    justify-content:center;
+}
+.estadisticas{
+    padding:80px 20px;
+}
+
+.contenedor-estadisticas{
+    grid-template-columns:repeat(2,1fr);
+    gap:35px;
+}
+
+.estadistica i{
+    font-size:50px;
+}
+
+.estadistica h3{
+    font-size:46px;
+}
+
+.estadistica p{
+     font-size:17px;
+
+     }
+}
+.estadisticas{
+    padding:70px 15px;
+}
+
+.contenedor-estadisticas{
+    grid-template-columns:1fr;
+    gap:40px;
+}
+
+.estadistica{
+    padding:10px;
+}
+
+.estadistica i{
+    font-size:45px;
+}
+
+.estadistica h3{
+    font-size:40px;
+}
+
+.estadistica p{
+    font-size:16px;
+}
+/*==================================================
+                CELULAR (480px)
+==================================================*/
+
+@media (max-width:480px){
+.encabezado-seccion{
+    margin-bottom:40px;
+}
+
+.etiqueta-seccion{
+    font-size:13px;
+    letter-spacing:2px;
+}
+
+.titulo-seccion{
+    font-size:30px;
+}
+
+.descripcion-seccion{
+    font-size:15px;
+    line-height:1.8;
+}
+
+.linea-seccion{
+    width:90px;
+}
+    .caracteristicas{
+        grid-template-columns: 1fr;
+        gap:20px;
+    }
+
+    .item{
+        padding:30px 20px;
+    }
+
+}
+
+    .encabezado{
+
+        padding:18px;
+    }
+
+    .logo{
+
+        width:150px;
+    }
+
+    nav{
+
+        gap:12px;
+    }
+
+    nav a{
+
+        font-size:15px;
+
+        letter-spacing:1px;
+    }
+    .hero{
+        height:480px;
+    }
+
+    .hero::before{
+        background:linear-gradient(
+            180deg,
+            rgba(17,24,39,.80),
+            rgba(17,24,39,.45)
+        );
+    }
+
+    .hero-content{
+        left:20px;
+        right:20px;
+        bottom:35px;
+    }
+
+    .hero-content h1{
+        font-size:34px;
+        line-height:1.2;
+    }
+
+    .hero-content p{
+        font-size:16px;
+        line-height:1.6;
+        margin-bottom:25px;
+    }
+
+    .boton{
+        width:100%;
+        text-align:center;
+        padding:15px;
+    }
+    .vehiculos{
+    padding:60px 15px;
+}
+
+.contenedor-cards{
+    max-width:100%;
+}
+
+.card{
+    border-radius:15px;
+}
+
+.card img{
+    height:220px;
+}
+
+.contenido-card{
+    padding:20px;
+}
+
+.contenido-card h3{
+    font-size:24px;
+}
+
+.anio{
+    font-size:16px;
+}
+
+.datos{
+    gap:10px;
+}
+
+.datos div{
+    font-size:15px;
+}
+
+.precio{
+    font-size:28px;
+}
+
+.ver-mas{
+    font-size:16px;
+}
+.elegir{
+    padding:60px 15px;
+}
+
+.item-elegir{
+    padding:25px 20px;
+}
+
+.item-elegir i{
+    font-size:38px;
+}
+
+.item-elegir h3{
+    font-size:22px;
+}
+
+.item-elegir p{
+    font-size:15px;
+    line-height:1.7;
+}
+.ubicacion{
+    padding:60px 15px;
+}
+
+.mapa iframe{
+    min-height:300px;
+}
+
+.info-ubicacion{
+    padding:25px 20px;
+}
+
+.info-item{
+    flex-direction:column;
+    text-align:center;
+    align-items:center;
+}
+
+.info-item i{
+    margin-top:0;
+    font-size:34px;
+}
+
+.botones-mapa{
+    flex-direction:column;
+    gap:15px;
+}
+
+.botones-mapa a{
+    width:100%;
+    justify-content:center;
+}
+.estadisticas{
+    padding:70px 15px;
+}
+
+.contenedor-estadisticas{
+    grid-template-columns:1fr;
+    gap:40px;
+}
+
+.estadistica{
+    padding:10px;
+}
+
+.estadistica i{
+    font-size:45px;
+}
+
+.estadistica h3{
+    font-size:40px;
+}
+
+.estadistica p{
+    font-size:16px;
+}
+.footer-contenedor{
+
+    grid-template-columns:1fr;
+
+    gap:50px;
+
+    text-align:center;
+
+    padding:60px 25px;
+}
+
+.footer-logo{
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.footer-logo p,
+.footer-logo p:last-child{
+
+    max-width:100%;
+}
+
+.footer-contacto,
+.footer-horario{
+
+    width:100%;
+}
+
+.footer-contacto h3,
+.footer-horario h3{
+
+    display:block;
+}
+
+.footer-contacto h3::after,
+.footer-horario h3::after{
+
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.footer-contacto p,
+.footer-horario p{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+
+    text-align:center;
+
+    line-height:1.7;
+}
+
+.footer-horario span{
+
+    margin-left:0;
+}
+
+.footer-copy{
+
+    font-size:14px;
+}
+ .footer{
+
+        padding-bottom:90px;
+    }
+
