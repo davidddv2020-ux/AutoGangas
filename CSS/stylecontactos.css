@@ -139,7 +139,7 @@ nav a.activo::after {
     align-items: center;
     gap: 8px;
     padding: 8px 13px;
-    color: #FDBA74;
+    color: #fdd474;
     background: rgba(249, 115, 22, .1);
     border: 1px solid rgba(249, 115, 22, .25);
     border-radius: 30px;
