@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contacta a AutoGangas para consultar vehículos, programar una visita o solicitar información.">
+    <title>Contacto | AutoGangas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="CSS/stylecontactos.css">
+</head>
+<body>
+    <header class="encabezado">
+        <a href="index.html" class="marca"><span>Auto</span>Gangas</a>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="catalogo.html">Catálogo</a>
+            <a href="contactos.html" class="activo">Contacto</a>
+        </nav>
+        <a class="boton-header" href="https://wa.me/50234146047" target="_blank" rel="noopener">
+            <i class="fa-brands fa-whatsapp"></i><span>WhatsApp</span>
+        </a>
+    </header>
+
+    <main>
+        <section class="hero-contacto">
+            <div class="hero-contenido">
+                <span class="etiqueta"><i class="fa-solid fa-comments"></i> ESTAMOS PARA AYUDARTE</span>
+                <h1>Hablemos de tu <span>próximo vehículo</span></h1>
+                <p>Consulta disponibilidad, solicita más fotografías o programa una visita. Nuestro equipo está listo para atenderte.</p>
+                <div class="acciones-rapidas">
+                    <a href="https://wa.me/50234146047" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i><strong>WhatsApp</strong><small>Escríbenos ahora</small></a>
+                    <a href="tel:+50234146047"><i class="fa-solid fa-phone"></i><strong>Llámanos</strong><small>3414-6047</small></a>
+                    <a href="https://maps.app.goo.gl/xR8wgXMD8mTt2gDJ7" target="_blank" rel="noopener"><i class="fa-solid fa-location-dot"></i><strong>Cómo llegar</strong><small>Abrir ubicación</small></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion-contacto">
+            <div class="titulo-seccion">
+                <span>CONTACTO DIRECTO</span>
+                <h2>¿Cómo podemos ayudarte?</h2>
+                <p>Completa el formulario y prepararemos tu consulta para enviarla por WhatsApp.</p>
+            </div>
+
+            <div class="contenedor-contacto">
+                <form class="formulario" id="formulario-contacto">
+                    <div class="encabezado-formulario">
+                        <div class="icono-titulo"><i class="fa-solid fa-paper-plane"></i></div>
+                        <div><h3>Envíanos tu consulta</h3><p>Los campos con * son obligatorios.</p></div>
+                    </div>
+
+                    <div class="fila-formulario">
+                        <div class="campo">
+                            <label for="nombre">Nombre completo *</label>
+                            <div class="control"><i class="fa-solid fa-user"></i><input id="nombre" name="nombre" type="text" placeholder="Escribe tu nombre" required></div>
+                        </div>
+                        <div class="campo">
+                            <label for="telefono">Número de teléfono *</label>
+                            <div class="control"><i class="fa-solid fa-phone"></i><input id="telefono" name="telefono" type="tel" placeholder="Ejemplo: 5555-5555" required></div>
+                        </div>
+                    </div>
+
+                    <div class="fila-formulario">
+                        <div class="campo">
+                            <label for="vehiculo">Vehículo de interés</label>
+                            <div class="control"><i class="fa-solid fa-car-side"></i><select id="vehiculo" name="vehiculo"><option value="Consulta general">Selecciona un vehículo</option><option>Nissan Sentra 2019</option><option>Honda Civic 2014</option><option>Mazda 3 2016</option><option>Otro vehículo</option></select></div>
+                        </div>
+                        <div class="campo">
+                            <label for="consulta">Tipo de consulta</label>
+                            <div class="control"><i class="fa-solid fa-circle-question"></i><select id="consulta" name="consulta"><option>Solicitar información</option><option>Confirmar disponibilidad</option><option>Programar una visita</option><option>Solicitar prueba de manejo</option><option>Consultar financiamiento</option></select></div>
+                        </div>
+                    </div>
+
+                    <div class="campo">
+                        <label for="mensaje">Mensaje *</label>
+                        <div class="control control-mensaje"><i class="fa-solid fa-message"></i><textarea id="mensaje" name="mensaje" rows="5" placeholder="Cuéntanos cómo podemos ayudarte..." required></textarea></div>
+                    </div>
+
+                    <button class="boton-enviar" type="submit"><i class="fa-brands fa-whatsapp"></i>Enviar consulta por WhatsApp</button>
+                    <p class="aviso"><i class="fa-solid fa-lock"></i> Al enviar, se abrirá WhatsApp. AutoGangas no publicará tus datos.</p>
+                </form>
+
+                <aside class="informacion">
+                    <span class="etiqueta-info">AUTOGANGAS</span>
+                    <h2>Contacto directo</h2>
+                    <p class="introduccion">También puedes comunicarte o visitarnos usando la siguiente información.</p>
+                    <div class="dato"><i class="fa-solid fa-location-dot"></i><div><span>Dirección</span><p>7ma calle 31-17, zona 4 de Mixco, bulevar Bosques de San Nicolás.</p></div></div>
+                    <div class="dato"><i class="fa-solid fa-phone"></i><div><span>Teléfono</span><a href="tel:+50234146047">+502 3414-6047</a></div></div>
+                    <div class="dato"><i class="fa-solid fa-clock"></i><div><span>Horario</span><p>Lunes a sábado<br>8:00 AM – 6:00 PM</p></div></div>
+                    <div class="separador"></div>
+                    <p class="respuesta"><i class="fa-solid fa-circle-check"></i> Normalmente respondemos durante nuestro horario de atención.</p>
+                </aside>
+            </div>
+        </section>
+
+        <section class="ubicacion">
+            <div class="titulo-seccion"><span>VISÍTANOS</span><h2>Encuéntranos fácilmente</h2><p>Abre la ruta en tu aplicación preferida o consulta el mapa.</p></div>
+            <div class="mapa-contenedor">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.9282923826995!2d-90.56680922629482!3d14.66001077562212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85899fca4d0e6217%3A0x14c8c0d2090f2ddc!2sImportadora%20LMPJimenez!5e0!3m2!1ses-419!2sgt!4v1783660788917!5m2!1ses-419!2sgt" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Ubicación de AutoGangas"></iframe>
+                <div class="rutas"><div><span>AutoGangas Bosques de San Nicolás</span><small>Zona 4 de Mixco, Guatemala</small></div><div><a href="https://maps.app.goo.gl/xR8wgXMD8mTt2gDJ7" target="_blank" rel="noopener"><i class="fa-solid fa-map-location-dot"></i>Google Maps</a><a href="https://waze.com/ul?ll=14.660011%2C-90.566809&navigate=yes&zoom=17" target="_blank" rel="noopener"><i class="fa-solid fa-route"></i>Waze</a></div></div>
+            </div>
+        </section>
+
+        <section class="preguntas">
+            <div class="titulo-seccion"><span>DUDAS FRECUENTES</span><h2>Preguntas frecuentes</h2></div>
+            <div class="lista-preguntas">
+                <details><summary>¿Puedo programar una prueba de manejo?<i class="fa-solid fa-plus"></i></summary><p>Sí. Escríbenos por WhatsApp para confirmar el vehículo, día y hora disponibles.</p></details>
+                <details><summary>¿Puedo solicitar más fotografías?<i class="fa-solid fa-plus"></i></summary><p>Sí. Indica el vehículo que te interesa y te enviaremos la información disponible.</p></details>
+                <details><summary>¿Cuentan con opciones de financiamiento?<i class="fa-solid fa-plus"></i></summary><p>Puedes consultar las opciones disponibles y los requisitos directamente con nuestro equipo.</p></details>
+                <details><summary>¿Cómo confirmo que un vehículo sigue disponible?<i class="fa-solid fa-plus"></i></summary><p>Envíanos una consulta por WhatsApp antes de visitar la agencia.</p></details>
+            </div>
+        </section>
+    </main>
+
+    <footer><div><a href="index.html" class="marca"><span>Auto</span>Gangas</a><p>Conduciendo confianza, impulsando sueños.</p></div><p>© 2026 AutoGangas. Todos los derechos reservados.</p></footer>
+
+    <script>
+        const formulario = document.querySelector("#formulario-contacto");
+        formulario.addEventListener("submit", function(evento){
+            evento.preventDefault();
+            if(!formulario.reportValidity()) return;
+            const nombre = document.querySelector("#nombre").value.trim();
+            const telefono = document.querySelector("#telefono").value.trim();
+            const vehiculo = document.querySelector("#vehiculo").value;
+            const consulta = document.querySelector("#consulta").value;
+            const mensaje = document.querySelector("#mensaje").value.trim();
+            const texto = `Hola AutoGangas, mi nombre es ${nombre}.\n\nTeléfono: ${telefono}\nVehículo de interés: ${vehiculo}\nTipo de consulta: ${consulta}\n\nMensaje: ${mensaje}`;
+            window.open(`https://wa.me/50234146047?text=${encodeURIComponent(texto)}`, "_blank", "noopener");
+        });
+    </script>
+</body>
+</html>

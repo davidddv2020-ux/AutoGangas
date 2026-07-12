@@ -1,0 +1,975 @@
+/*==================================================
+                VARIABLES Y GENERALES
+==================================================*/
+
+:root{
+    --azul:#111827;
+    --naranja:#F97316;
+    --naranja-oscuro:#EA580C;
+    --gris-fondo:#F3F4F6;
+    --gris-texto:#6B7280;
+    --gris-borde:#E5E7EB;
+    --blanco:#FFFFFF;
+}
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:var(--gris-fondo);
+    color:var(--azul);
+}
+
+
+/*==================================================
+                HERO CATÁLOGO
+==================================================*/
+
+.hero-catalogo{
+    padding:90px 20px 75px;
+    text-align:center;
+    background:
+        linear-gradient(rgba(17,24,39,.88), rgba(17,24,39,.88)),
+        url("../img/fondo-catalogo.jpg");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.hero-catalogo-contenido{
+    max-width:800px;
+    margin:auto;
+}
+
+.etiqueta-seccion,
+.subtitulo-catalogo{
+    color:var(--naranja);
+    font-size:14px;
+    font-weight:800;
+    letter-spacing:2px;
+}
+
+.hero-catalogo h1{
+    margin:18px 0 20px;
+    color:var(--blanco);
+    font-size:52px;
+    line-height:1.1;
+}
+
+.hero-catalogo p{
+    margin:0 0 38px;
+    color:#D1D5DB;
+    font-size:18px;
+    line-height:1.7;
+}
+
+.buscador{
+    max-width:620px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    gap:15px;
+    padding:18px 24px;
+    background:var(--blanco);
+    border:2px solid transparent;
+    border-radius:14px;
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+    transition:.3s;
+}
+
+.buscador:focus-within{
+    border-color:var(--naranja);
+    transform:translateY(-3px);
+}
+
+.buscador i{
+    color:var(--naranja);
+    font-size:20px;
+}
+
+.buscador input{
+    width:100%;
+    padding:0;
+    border:none;
+    outline:none;
+    color:var(--azul);
+    background:transparent;
+    font-size:16px;
+}
+
+
+/*==================================================
+                SECCIÓN CATÁLOGO
+==================================================*/
+
+.catalogo-vehiculos{
+    padding:70px 20px 90px;
+    background:var(--gris-fondo);
+}
+
+.encabezado-catalogo{
+    max-width:1200px;
+    margin:0 auto 35px;
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    gap:25px;
+}
+
+.encabezado-catalogo h2{
+    margin:8px 0 0;
+    color:var(--azul);
+    font-size:36px;
+}
+
+.encabezado-catalogo p{
+    margin:0;
+    color:var(--gris-texto);
+}
+
+.encabezado-catalogo p span{
+    color:var(--naranja);
+    font-weight:bold;
+}
+
+
+/*==================================================
+                CUADRÍCULA
+==================================================*/
+
+.contenedor-catalogo{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(3, minmax(0, 1fr));
+    gap:30px;
+}
+
+
+/*==================================================
+                TARJETA
+==================================================*/
+
+.tarjeta-vehiculo{
+    min-width:0;
+    display:flex;
+    flex-direction:column;
+    overflow:hidden;
+    color:inherit;
+    background:var(--blanco);
+    border:1px solid var(--gris-borde);
+    border-radius:18px;
+    text-decoration:none;
+    box-shadow:0 8px 25px rgba(17,24,39,.08);
+    transition:transform .35s, box-shadow .35s, border-color .35s;
+}
+
+.tarjeta-vehiculo:hover{
+    transform:translateY(-8px);
+    border-color:rgba(249,115,22,.45);
+    box-shadow:0 18px 40px rgba(17,24,39,.16);
+}
+
+.tarjeta-vehiculo:focus-visible{
+    outline:3px solid rgba(249,115,22,.45);
+    outline-offset:4px;
+}
+
+
+/*==================================================
+                IMAGEN
+==================================================*/
+
+.imagen-vehiculo{
+    position:relative;
+    height:230px;
+    overflow:hidden;
+    background:#E5E7EB;
+}
+
+.imagen-vehiculo img{
+    width:100%;
+    height:100%;
+    display:block;
+    object-fit:cover;
+    transition:transform .5s;
+}
+
+.tarjeta-vehiculo:hover .imagen-vehiculo img{
+    transform:scale(1.06);
+}
+
+
+/*==================================================
+                ETIQUETAS
+==================================================*/
+
+.etiqueta-vehiculo{
+    position:absolute;
+    top:16px;
+    left:16px;
+    z-index:2;
+    padding:8px 14px;
+    color:var(--blanco);
+    background:var(--naranja);
+    border-radius:30px;
+    font-size:13px;
+    font-weight:700;
+    box-shadow:0 5px 15px rgba(0,0,0,.18);
+}
+
+.etiqueta-nuevo{
+    background:var(--azul);
+}
+
+
+/*==================================================
+                INFORMACIÓN
+==================================================*/
+
+.informacion-vehiculo{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    padding:24px;
+}
+
+.encabezado-tarjeta{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:15px;
+    margin-bottom:22px;
+}
+
+.encabezado-tarjeta h3{
+    margin:0;
+    color:var(--azul);
+    font-size:24px;
+    line-height:1.2;
+}
+
+.anio-vehiculo{
+    flex-shrink:0;
+    padding:6px 10px;
+    color:var(--gris-texto);
+    background:var(--gris-fondo);
+    border-radius:7px;
+    font-size:14px;
+    font-weight:bold;
+}
+
+
+/*==================================================
+                CARACTERÍSTICAS
+==================================================*/
+
+.caracteristicas-auto{
+    display:grid;
+    grid-template-columns:repeat(3, minmax(0, 1fr));
+    padding:18px 0;
+    border-top:1px solid var(--gris-borde);
+    border-bottom:1px solid var(--gris-borde);
+}
+
+.caracteristicas-auto span{
+    min-width:0;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:8px;
+    color:var(--gris-texto);
+    font-size:13px;
+    text-align:center;
+}
+
+.caracteristicas-auto span:not(:last-child){
+    border-right:1px solid var(--gris-borde);
+}
+
+.caracteristicas-auto i{
+    color:var(--naranja);
+    font-size:18px;
+}
+
+
+/*==================================================
+                PRECIO Y ENLACE
+==================================================*/
+
+.parte-inferior{
+    margin-top:auto;
+    padding-top:22px;
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    gap:15px;
+}
+
+.precio-vehiculo{
+    display:flex;
+    flex-direction:column;
+    gap:3px;
+}
+
+.precio-vehiculo small{
+    color:var(--gris-texto);
+    font-size:12px;
+}
+
+.precio-vehiculo strong{
+    color:var(--naranja);
+    font-size:26px;
+}
+
+.ver-detalles{
+    display:flex;
+    align-items:center;
+    gap:7px;
+    color:var(--azul);
+    font-size:14px;
+    font-weight:bold;
+    white-space:nowrap;
+    transition:.3s;
+}
+
+.tarjeta-vehiculo:hover .ver-detalles{
+    color:var(--naranja);
+}
+
+.ver-detalles i{
+    transition:transform .3s;
+}
+
+.tarjeta-vehiculo:hover .ver-detalles i{
+    transform:translateX(4px);
+}
+
+
+/*==================================================
+                TABLETS
+==================================================*/
+
+@media (max-width:950px){
+
+    .contenedor-catalogo{
+        grid-template-columns:repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/*==================================================
+                TELÉFONOS
+==================================================*/
+
+@media (max-width:650px){
+
+    .hero-catalogo{
+        padding:65px 18px 55px;
+    }
+
+    .hero-catalogo h1{
+        font-size:38px;
+    }
+
+    .hero-catalogo p{
+        font-size:16px;
+    }
+
+    .buscador{
+        padding:16px 18px;
+    }
+
+    .catalogo-vehiculos{
+        padding:50px 16px 70px;
+    }
+
+    .encabezado-catalogo{
+        align-items:flex-start;
+        flex-direction:column;
+    }
+
+    .encabezado-catalogo h2{
+        font-size:30px;
+    }
+
+    .contenedor-catalogo{
+        grid-template-columns:1fr;
+    }
+
+    .imagen-vehiculo{
+        height:220px;
+    }
+
+}
+
+
+/*==================================================
+                TELÉFONOS PEQUEÑOS
+==================================================*/
+
+@media (max-width:380px){
+
+    .parte-inferior{
+        align-items:flex-start;
+        flex-direction:column;
+    }
+
+}
+/*==================================================
+            ACABADO PROFESIONAL DEL CATÁLOGO
+==================================================*/
+
+body{
+    min-height:100vh;
+    background:#F8FAFC;
+}
+
+
+/*==================================================
+                    HEADER
+==================================================*/
+
+.encabezado-catalogo-principal{
+    position:sticky;
+    top:0;
+    z-index:100;
+    min-height:76px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:30px;
+    padding:15px max(5%, 20px);
+    background:rgba(17,24,39,.96);
+    border-bottom:1px solid rgba(255,255,255,.08);
+    box-shadow:0 5px 25px rgba(0,0,0,.15);
+    backdrop-filter:blur(12px);
+}
+
+.logo-catalogo{
+    color:var(--blanco);
+    font-size:25px;
+    font-weight:900;
+    text-decoration:none;
+    letter-spacing:-1px;
+}
+
+.logo-catalogo span{
+    color:var(--naranja);
+}
+
+.navegacion-catalogo{
+    display:flex;
+    align-items:center;
+    gap:32px;
+}
+
+.navegacion-catalogo a{
+    position:relative;
+    padding:10px 0;
+    color:#D1D5DB;
+    font-size:15px;
+    font-weight:600;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.navegacion-catalogo a:hover,
+.navegacion-catalogo .enlace-activo{
+    color:var(--blanco);
+}
+
+.navegacion-catalogo a::after{
+    content:"";
+    position:absolute;
+    right:0;
+    bottom:3px;
+    left:0;
+    height:2px;
+    background:var(--naranja);
+    transform:scaleX(0);
+    transition:.3s;
+}
+
+.navegacion-catalogo a:hover::after,
+.navegacion-catalogo .enlace-activo::after{
+    transform:scaleX(1);
+}
+
+.boton-contacto{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    padding:11px 18px;
+    color:var(--blanco);
+    background:var(--naranja);
+    border-radius:9px;
+    font-size:14px;
+    font-weight:bold;
+    text-decoration:none;
+    box-shadow:0 7px 18px rgba(249,115,22,.25);
+    transition:.3s;
+}
+
+.boton-contacto:hover{
+    background:var(--naranja-oscuro);
+    transform:translateY(-2px);
+}
+
+
+/*==================================================
+                HERO MEJORADO
+==================================================*/
+
+.hero-catalogo{
+    position:relative;
+    isolation:isolate;
+    overflow:hidden;
+    min-height:540px;
+    display:flex;
+    align-items:center;
+    padding:90px 20px;
+    background:
+        radial-gradient(
+            circle at 15% 30%,
+            rgba(249,115,22,.18),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 85% 70%,
+            rgba(249,115,22,.12),
+            transparent 25%
+        ),
+        linear-gradient(135deg, #0B1120 0%, #111827 55%, #1F2937 100%);
+}
+
+.hero-catalogo::before{
+    content:"";
+    position:absolute;
+    top:-160px;
+    right:-130px;
+    z-index:-1;
+    width:430px;
+    height:430px;
+    border:70px solid rgba(255,255,255,.025);
+    border-radius:50%;
+}
+
+.hero-catalogo::after{
+    content:"";
+    position:absolute;
+    bottom:-190px;
+    left:-140px;
+    z-index:-1;
+    width:390px;
+    height:390px;
+    border:60px solid rgba(249,115,22,.05);
+    border-radius:50%;
+}
+
+.hero-catalogo-contenido{
+    max-width:850px;
+}
+
+.etiqueta-seccion{
+    display:inline-flex;
+    align-items:center;
+    gap:9px;
+    padding:8px 14px;
+    color:#FDBA74;
+    background:rgba(249,115,22,.1);
+    border:1px solid rgba(249,115,22,.25);
+    border-radius:30px;
+    font-size:12px;
+    letter-spacing:1.7px;
+}
+
+.hero-catalogo h1{
+    max-width:760px;
+    margin:23px auto 20px;
+    font-size:clamp(42px, 6vw, 68px);
+    letter-spacing:-2px;
+}
+
+.hero-catalogo h1 span{
+    display:block;
+    color:var(--naranja);
+}
+
+.hero-catalogo p{
+    max-width:720px;
+    margin:0 auto 38px;
+    color:#CBD5E1;
+}
+
+.buscador{
+    border-radius:12px;
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.3),
+        0 0 0 1px rgba(255,255,255,.05);
+}
+
+.buscador:hover{
+    transform:translateY(-2px);
+}
+
+.buscador input::placeholder{
+    color:#9CA3AF;
+}
+
+.beneficios-catalogo{
+    margin-top:27px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:25px;
+}
+
+.beneficios-catalogo span{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    color:#CBD5E1;
+    font-size:13px;
+}
+
+.beneficios-catalogo i{
+    color:var(--naranja);
+}
+
+
+/*==================================================
+             ENCABEZADO DEL INVENTARIO
+==================================================*/
+
+.catalogo-vehiculos{
+    position:relative;
+    padding-top:80px;
+    background:
+        linear-gradient(
+            180deg,
+            #F8FAFC 0%,
+            #F3F4F6 100%
+        );
+}
+
+.encabezado-catalogo{
+    padding-bottom:25px;
+    border-bottom:1px solid var(--gris-borde);
+}
+
+.subtitulo-catalogo{
+    display:flex;
+    align-items:center;
+    gap:9px;
+    font-size:12px;
+}
+
+.subtitulo-catalogo::before{
+    content:"";
+    width:28px;
+    height:3px;
+    background:var(--naranja);
+    border-radius:10px;
+}
+
+.encabezado-catalogo h2{
+    font-size:clamp(30px, 4vw, 42px);
+    letter-spacing:-1px;
+}
+
+.encabezado-catalogo p{
+    padding:10px 16px;
+    background:var(--blanco);
+    border:1px solid var(--gris-borde);
+    border-radius:30px;
+    box-shadow:0 5px 15px rgba(17,24,39,.04);
+}
+
+
+/*==================================================
+              TARJETAS PROFESIONALES
+==================================================*/
+
+.contenedor-catalogo{
+    gap:32px;
+}
+
+.tarjeta-vehiculo{
+    position:relative;
+    border-color:rgba(17,24,39,.08);
+    border-radius:16px;
+    box-shadow:
+        0 3px 8px rgba(17,24,39,.04),
+        0 12px 30px rgba(17,24,39,.06);
+}
+
+.tarjeta-vehiculo::after{
+    content:"";
+    position:absolute;
+    right:0;
+    bottom:0;
+    left:0;
+    height:4px;
+    background:linear-gradient(
+        90deg,
+        var(--naranja),
+        #FB923C
+    );
+    transform:scaleX(0);
+    transform-origin:left;
+    transition:transform .35s;
+}
+
+.tarjeta-vehiculo:hover::after{
+    transform:scaleX(1);
+}
+
+.tarjeta-vehiculo:hover{
+    transform:translateY(-9px);
+    border-color:rgba(249,115,22,.25);
+    box-shadow:
+        0 12px 25px rgba(17,24,39,.08),
+        0 25px 50px rgba(17,24,39,.12);
+}
+
+.imagen-vehiculo{
+    height:245px;
+}
+
+.imagen-vehiculo::after{
+    content:"";
+    position:absolute;
+    right:0;
+    bottom:0;
+    left:0;
+    height:45%;
+    background:linear-gradient(
+        transparent,
+        rgba(17,24,39,.38)
+    );
+    pointer-events:none;
+}
+
+.etiqueta-vehiculo{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    padding:8px 13px;
+    border-radius:8px;
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:.5px;
+}
+
+.informacion-vehiculo{
+    padding:25px 25px 27px;
+}
+
+.encabezado-tarjeta{
+    margin-bottom:19px;
+}
+
+.encabezado-tarjeta h3{
+    font-size:25px;
+    letter-spacing:-.5px;
+}
+
+.anio-vehiculo{
+    color:var(--azul);
+    background:#F8FAFC;
+    border:1px solid var(--gris-borde);
+}
+
+.caracteristicas-auto{
+    gap:6px;
+    padding:17px 0;
+    background:#F8FAFC;
+    border:none;
+    border-radius:11px;
+}
+
+.caracteristicas-auto span{
+    padding:2px 6px;
+    font-size:12px;
+}
+
+.caracteristicas-auto span:not(:last-child){
+    border-color:#E2E8F0;
+}
+
+.caracteristicas-auto i{
+    width:34px;
+    height:34px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:var(--naranja);
+    background:rgba(249,115,22,.09);
+    border-radius:9px;
+    font-size:15px;
+}
+
+.parte-inferior{
+    margin-top:21px;
+    padding-top:20px;
+    border-top:1px solid var(--gris-borde);
+}
+
+.precio-vehiculo small{
+    text-transform:uppercase;
+    letter-spacing:.7px;
+}
+
+.precio-vehiculo strong{
+    font-size:29px;
+    letter-spacing:-1px;
+}
+
+.ver-detalles{
+    min-height:39px;
+    padding:9px 13px;
+    color:var(--blanco);
+    background:var(--azul);
+    border-radius:8px;
+    font-size:13px;
+}
+
+.tarjeta-vehiculo:hover .ver-detalles{
+    color:var(--blanco);
+    background:var(--naranja);
+}
+
+
+/*==================================================
+                SIN RESULTADOS
+==================================================*/
+
+.sin-resultados{
+    max-width:600px;
+    margin:50px auto 0;
+    display:none;
+    flex-direction:column;
+    align-items:center;
+    padding:50px 25px;
+    color:var(--gris-texto);
+    background:var(--blanco);
+    border:1px dashed #CBD5E1;
+    border-radius:18px;
+    text-align:center;
+}
+
+.sin-resultados i{
+    margin-bottom:18px;
+    color:#CBD5E1;
+    font-size:48px;
+}
+
+.sin-resultados h3{
+    margin:0 0 8px;
+    color:var(--azul);
+    font-size:23px;
+}
+
+.sin-resultados p{
+    margin:0;
+}
+
+
+/*==================================================
+                RESPONSIVE
+==================================================*/
+
+@media (max-width:800px){
+
+    .navegacion-catalogo{
+        display:none;
+    }
+
+}
+
+@media (max-width:650px){
+
+    .encabezado-catalogo-principal{
+        min-height:68px;
+        padding:13px 17px;
+    }
+
+    .logo-catalogo{
+        font-size:22px;
+    }
+
+    .boton-contacto{
+        padding:10px 13px;
+        font-size:12px;
+    }
+
+    .hero-catalogo{
+        min-height:0;
+        padding:75px 17px 65px;
+    }
+
+    .hero-catalogo h1{
+        margin-top:20px;
+        font-size:42px;
+        letter-spacing:-1.5px;
+    }
+
+    .beneficios-catalogo{
+        align-items:flex-start;
+        flex-direction:column;
+        max-width:310px;
+        margin:25px auto 0;
+        gap:12px;
+    }
+
+    .imagen-vehiculo{
+        height:235px;
+    }
+
+    .encabezado-catalogo p{
+        padding:8px 13px;
+    }
+
+}
+
+@media (max-width:390px){
+
+    .boton-contacto{
+        width:42px;
+        height:42px;
+        justify-content:center;
+        padding:0;
+        border-radius:50%;
+        font-size:0;
+    }
+
+    .boton-contacto i{
+        font-size:15px;
+    }
+
+    .hero-catalogo h1{
+        font-size:36px;
+    }
+
+    .caracteristicas-auto{
+        grid-template-columns:1fr;
+        gap:10px;
+    }
+
+    .caracteristicas-auto span{
+        flex-direction:row;
+        justify-content:flex-start;
+        padding:0 15px;
+    }
+
+    .caracteristicas-auto span:not(:last-child){
+        border-right:none;
+    }
+
+}

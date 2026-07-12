@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AutoGangas Bosques de San Nicolas</title>
+    <title>AutoGangas | Vehículos de calidad en Guatemala</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="CSS/style.css">
-    <link rel="stylesheet" href="CSS/responsive.css">
 </head>
 <body>
     
@@ -15,7 +14,7 @@
         <img src="img/logotipo.png" class="logo" alt="AutoGangas">
     </a>
     <nav>
-        <a href="index.html">Inicio</a>
+        <a href="index.html" class="activo">Inicio</a>
         <a href="catalogo.html">Catálogo</a>
         <a href="contactos.html">Contacto</a>
     </nav>
@@ -25,14 +24,18 @@
     <img src="img/Portada.jpg" alt="Portada">
      <div class="hero-content">
 
-        <h1>Encuentra el vehículo ideal</h1>
+        <span class="hero-etiqueta"><i class="fa-solid fa-car-side"></i> AUTOGANGAS GUATEMALA</span>
+        <h1>Tu próximo vehículo empieza aquí</h1>
         <p>
             Calidad, confianza y el mejor precio para que conduzcas con tranquilidad.
         </p>
-        <a href="catalogo.html" class="boton">Ver catálogo</a>
+        <div class="hero-acciones">
+            <a href="catalogo.html" class="boton">Explorar vehículos <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="contactos.html" class="boton-secundario">Hablar con un asesor</a>
+        </div>
     </div>
     </section>
-    <section class="caracteristicas">
+    <section class="caracteristicas" aria-label="Beneficios de AutoGangas">
 
     <div class="item">
         <i class="fa-solid fa-shield"></i>
@@ -59,7 +62,7 @@
     </div>
 </section>
 
-<section class="vehiculos">
+<section class="vehiculos" id="vehiculos-destacados">
   <div class="encabezado-seccion">
     <span class="etiqueta-seccion">AUTOGANGAS</span>
     <h2 class="titulo-seccion">
@@ -72,7 +75,7 @@
     <div class="linea-seccion"></div>
 </div>
     <div class="contenedor-cards">
-        <a href="Nissan.html" class="card">
+        <a href="Carros/Nissan.html" class="card">
             <span class="etiqueta">Destacado</span>
             <img src="img/Nissan Sentra.jpeg" alt="Nissan Sentra">
             <div class="contenido-card">
@@ -89,7 +92,7 @@
                 </span>
             </div>
         </a>
-        <a href="civic.html" class="card">
+        <a href="Carros/Honda.html" class="card">
             <img src="img/Honda civic.jpeg" alt="Honda Civic">
             <div class="contenido-card">
                 <h3>Honda Civic</h3>
@@ -105,7 +108,7 @@
                 </span>
             </div>
         </a>
-        <a href="Mazda3.html" class="card">
+        <a href="Carros/Mazda3.html" class="card">
             <img src="img/Mazda 3.jpeg" alt="Mazda 3">
             <div class="contenido-card">
                 <h3>Mazda 3</h3>
@@ -121,6 +124,9 @@
                 </span>
             </div>
         </a>
+    </div>
+    <div class="ver-inventario">
+        <a href="catalogo.html" class="boton">Ver inventario completo <i class="fa-solid fa-arrow-right"></i></a>
     </div>
 </section>
 <section class="elegirnos">

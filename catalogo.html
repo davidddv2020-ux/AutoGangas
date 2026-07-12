@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Catálogo de vehículos | AutoGangas</title>
+
+    <!-- Iconos de Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Estilos del catálogo -->
+    <link rel="stylesheet" href="CSS/stylecatalogo.css">
+</head>
+
+<body>
+  <header class="encabezado-catalogo-principal">
+
+    <a href="index.html" class="logo-catalogo">
+        <span>Auto</span>Gangas
+    </a>
+
+    <nav class="navegacion-catalogo">
+        <a href="index.html">Inicio</a>
+        <a href="catalogo.html" class="enlace-activo">Catálogo</a>
+        <a href="contactos.html">Contacto</a>
+    </nav>
+
+    <a href="contactos.html" class="boton-contacto">
+        <i class="fa-solid fa-message"></i>
+        Contáctanos
+    </a>
+
+</header>  
+
+    <!-- HERO DEL CATÁLOGO -->
+    <section class="hero-catalogo">
+
+        <div class="hero-catalogo-contenido">
+
+            <span class="etiqueta-seccion">
+    <i class="fa-solid fa-car-side"></i>
+    INVENTARIO AUTOGANGAS
+</span>
+
+<h1>
+    Encuentra el vehículo
+    <span>ideal para ti</span>
+</h1>
+
+            <h1>Catálogo de vehículos</h1>
+
+            <p>
+                Explora nuestro inventario y encuentra el vehículo que mejor
+                se adapte a tus necesidades. Todos nuestros automóviles son
+                seleccionados para ofrecer calidad, confianza y un excelente precio.
+            </p>
+
+            <div class="buscador">
+                <div class="beneficios-catalogo">
+
+    <span>
+        <i class="fa-solid fa-circle-check"></i>
+        Vehículos seleccionados
+    </span>
+
+    <span>
+        <i class="fa-solid fa-shield-halved"></i>
+        Compra con confianza
+    </span>
+
+    <span>
+        <i class="fa-solid fa-tags"></i>
+        Precios competitivos
+    </span>
+
+</div>
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="search"
+                    id="buscador-vehiculos"
+                    placeholder="Buscar por marca, modelo o año..."
+                    aria-label="Buscar vehículos">
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CATÁLOGO -->
+    <main class="catalogo-vehiculos">
+
+        <div class="encabezado-catalogo">
+
+            <div>
+                <span class="subtitulo-catalogo">NUESTRO INVENTARIO</span>
+                <h2>Vehículos disponibles</h2>
+            </div>
+
+            <p>
+                <span id="cantidad-vehiculos">2</span> vehículos encontrados
+            </p>
+
+        </div>
+
+
+        <div class="contenedor-catalogo">
+
+            <!-- TARJETA: NISSAN SENTRA -->
+            <a
+                href="Carros/Nissan.html"
+                class="tarjeta-vehiculo"
+                data-nombre="Nissan Sentra 2019">
+
+                <div class="imagen-vehiculo">
+
+                    <span class="etiqueta-vehiculo">
+                        Destacado
+                    </span>
+
+                    <img
+                        src="img/Nissan Sentra.jpeg"
+                        alt="Nissan Sentra 2019"
+                        loading="lazy">
+
+                </div>
+
+                <div class="informacion-vehiculo">
+
+                    <div class="encabezado-tarjeta">
+                        <h3>Nissan Sentra</h3>
+                        <span class="anio-vehiculo">2019</span>
+                    </div>
+
+                    <div class="caracteristicas-auto">
+
+                        <span>
+                            <i class="fa-solid fa-gears"></i>
+                            Automático
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-gas-pump"></i>
+                            Gasolina
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-road"></i>
+                            130,347 millas
+                        </span>
+
+                    </div>
+
+                    <div class="parte-inferior">
+
+                        <div class="precio-vehiculo">
+                            <small>Precio</small>
+                            <strong>Q45,000</strong>
+                        </div>
+
+                        <span class="ver-detalles">
+                            Ver detalles
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </a>
+
+
+            <!-- TARJETA: HONDA CIVIC -->
+            <a
+                href="Carros/Honda Civic.html"
+                class="tarjeta-vehiculo"
+                data-nombre="Honda Civic 2010">
+
+                <div class="imagen-vehiculo">
+
+                    <span class="etiqueta-vehiculo etiqueta-nuevo">
+                        Disponible
+                    </span>
+
+                    <img
+                        src="img/Honda civic.jpeg"
+                        alt="Honda Civic 2010"
+                        loading="lazy">
+
+                </div>
+
+                <div class="informacion-vehiculo">
+
+                    <div class="encabezado-tarjeta">
+                        <h3>Honda Civic</h3>
+                        <span class="anio-vehiculo">2010</span>
+                    </div>
+
+                    <div class="caracteristicas-auto">
+
+                        <span>
+                            <i class="fa-solid fa-gears"></i>
+                            Mecánico
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-gas-pump"></i>
+                            Gasolina
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-road"></i>
+                            11386 millas
+                        </span>
+
+                    </div>
+
+                    <div class="parte-inferior">
+
+                        <div class="precio-vehiculo">
+                            <small>Precio</small>
+                            <strong>Q35,000</strong>
+                        </div>
+
+                        <span class="ver-detalles">
+                            Ver detalles
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </a>
+            <!-- TARJETA: MAZDA 3 -->
+            <a
+                href="Carros/Mazda 3.html"
+                class="tarjeta-vehiculo"
+                data-nombre="Mazda 3 2014">
+
+                <div class="imagen-vehiculo">
+
+                    <span class="etiqueta-vehiculo etiqueta-nuevo">
+                        Disponible
+                    </span>
+
+                    <img
+                        src="img/Mazda 3.jpeg"
+                        alt="Mazda 3 2014"
+                        loading="lazy">
+
+                </div>
+
+                <div class="informacion-vehiculo">
+
+                    <div class="encabezado-tarjeta">
+                        <h3>Mazda 3</h3>
+                        <span class="anio-vehiculo">2014</span>
+                    </div>
+
+                    <div class="caracteristicas-auto">
+
+                        <span>
+                            <i class="fa-solid fa-gears"></i>
+                            Mecánico
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-gas-pump"></i>
+                            Gasolina
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-road"></i>
+                            101,367 millas
+                        </span>
+
+                    </div>
+
+                    <div class="parte-inferior">
+
+                        <div class="precio-vehiculo">
+                            <small>Precio</small>
+                            <strong>Q44,000</strong>
+                        </div>
+
+                        <span class="ver-detalles">
+                            Ver detalles
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </a>
+            <!-- TARJETA: TOYOTA TACOMA-->
+            <a
+                href="Carros/ToyotaTacoma.html"
+                class="tarjeta-vehiculo"
+                data-nombre="Toyota Tacoma SR5 2003">
+
+                <div class="imagen-vehiculo">
+
+                    <span class="etiqueta-vehiculo">
+                        Destacado
+                    </span>
+
+                    <img
+                        src="img/Toyota tacoma.jpeg"
+                        alt="Toyota Tacoma SR5 2003"
+                        loading="lazy">
+
+                </div>
+
+                <div class="informacion-vehiculo">
+
+                    <div class="encabezado-tarjeta">
+                        <h3>Toyota Tacoma SR5</h3>
+                        <span class="anio-vehiculo">2003</span>
+                    </div>
+
+                    <div class="caracteristicas-auto">
+
+                        <span>
+                            <i class="fa-solid fa-gears"></i>
+                            Mecánico
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-gas-pump"></i>
+                            Gasolina
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-road"></i>
+                            126,000 millas
+                        </span>
+
+                    </div>
+
+                    <div class="parte-inferior">
+
+                        <div class="precio-vehiculo">
+                            <small>Precio</small>
+                            <strong>Q98,000</strong>
+                        </div>
+
+                        <span class="ver-detalles">
+                            Ver detalles
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </a>
+            <!-- TARJETA: MAZDA 6-->
+            <a
+                href="Carros/Mazda 6.html"
+                class="tarjeta-vehiculo"
+                data-nombre="Mazda 6 Limited Sport 2011">
+
+                <div class="imagen-vehiculo">
+
+                    <span class="etiqueta-vehiculo">
+                        Destacado
+                    </span>
+
+                    <img
+                        src="img/Mazda 6.jpeg"
+                        alt="Mazda 6 Limited Sport 2011"
+                        loading="lazy">
+
+                </div>
+
+                <div class="informacion-vehiculo">
+
+                    <div class="encabezado-tarjeta">
+                        <h3>Mazda 6 Limited Sport</h3>
+                        <span class="anio-vehiculo">2011</span>
+                    </div>
+
+                    <div class="caracteristicas-auto">
+
+                        <span>
+                            <i class="fa-solid fa-gears"></i>
+                            Automático
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-gas-pump"></i>
+                            Gasolina
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-road"></i>
+                            000 millas
+                        </span>
+
+                    </div>
+
+                    <div class="parte-inferior">
+
+                        <div class="precio-vehiculo">
+                            <small>Precio</small>
+                            <strong>Q30,000</strong>
+                        </div>
+
+                        <span class="ver-detalles">
+                            Ver detalles
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </a>
+
+
+        </div>
+        <div class="sin-resultados" id="sin-resultados">
+
+    <i class="fa-solid fa-car-side"></i>
+
+    <h3>No encontramos vehículos</h3>
+
+    <p>
+        Prueba buscando otra marca, modelo o año.
+    </p>
+
+</div>
+
+    </main>
+
+
+    <!-- BUSCADOR DEL CATÁLOGO -->
+    <script>
+    const buscador = document.querySelector("#buscador-vehiculos");
+    const tarjetas = document.querySelectorAll(".tarjeta-vehiculo");
+    const cantidad = document.querySelector("#cantidad-vehiculos");
+    const sinResultados = document.querySelector("#sin-resultados");
+
+    buscador.addEventListener("input", () => {
+
+        const texto = buscador.value.toLowerCase().trim();
+        let visibles = 0;
+
+        tarjetas.forEach((tarjeta) => {
+
+            const nombre = tarjeta.dataset.nombre.toLowerCase();
+            const coincide = nombre.includes(texto);
+
+            tarjeta.style.display = coincide ? "flex" : "none";
+
+            if (coincide) {
+                visibles++;
+            }
+
+        });
+
+        cantidad.textContent = visibles;
+
+        sinResultados.style.display =
+            visibles === 0 ? "flex" : "none";
+    });
+</script>
+
+</body>
+</html>
